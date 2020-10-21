@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const ExampleState = () => {
+
   const [numeroA, actNumeroA] = useState(0);
   const [numeroB, actNumeroB] = useState(0);
 

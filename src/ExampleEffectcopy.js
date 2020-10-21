@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
 
 export default function Example() {
-  const [secondCount, setSecondCount] = useState(0);
   const [count, setCount] = useState(0);
+
+  const [secondCount, setSecondCount] = useState(0);
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    console.log("secondCount", secondCount);
+    document.title = `You clicked ${secondCount} times`;
+  });
 
   // Similar to componentDidMount and componentDidUpdate:
   useEffect(() => {
     // Update the document title using the browser API
     console.log("count", count);
     document.title = `You clicked ${count} times`;
-  });
-
-  useEffect(() => {
-    // Update the document title using the browser API
-    console.log("secondCount", secondCount);
-    document.title = `You clicked ${secondCount} times`;
   });
 
   return (

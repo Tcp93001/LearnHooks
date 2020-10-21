@@ -1,13 +1,16 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import ExampleEffect from "./ExampleEffect";
+import ExampleEffectcopy from "./ExampleEffectcopy";
 import ExampleState from "./ExampleState";
 import ExampleLifeCycles from "./ExampleLifeCycles";
+import Redirect from './Redirect'
 import WhitePage from "./WhitePage";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
-function App() {
+function App(props) {
+
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -23,8 +26,9 @@ function App() {
           </Route>
           <Route path="/hooks">
             <ExampleState />
-            <ExampleEffect />
+            <ExampleEffectcopy />
           </Route>
+
           <div style={{ width: "29%", border: "1px solid peru", padding: 10 }}>
             <p>
               <Link to="/">Clic para Ejercicio Inicial</Link>

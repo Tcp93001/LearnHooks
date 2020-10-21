@@ -3,12 +3,9 @@ import React, { useState, useEffect } from "react";
 export default function Example() {
   const [count, setCount] = useState(0);
 
-  // Similar to componentDidMount and componentDidUpdate:
   useEffect(() => {
-    // Update the document title using the browser API
-    console.log("count", count);
-    document.title = `You clicked ${count} times`;
-  });
+    document.title = `You clicked ${count} times`
+  })
 
   return (
     <div style={{ width: "29%", border: "1px solid red", padding: 10 }}>
@@ -27,3 +24,12 @@ export default function Example() {
     </div>
   );
 }
+
+ // const [count, setCount] = useState(0);
+
+  // Similar to componentDidMount and componentDidUpdate:
+  // useEffect(() => {
+  //   // Update the document title using the browser API
+  //   console.log("count", count);
+  //   document.title = `You clicked ${count} times`;
+  // });
